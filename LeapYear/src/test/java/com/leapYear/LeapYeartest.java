@@ -7,12 +7,17 @@ import org.junit.jupiter.api.Test;
 class LeapYeartest {
 
 	@Test
-	public void YearIsLeaptest() {
-		
-		 leapYear y=new leapYear();
+	public void YearIsLeaptest() {		
 		 int year=2020;
-		 boolean actual=y.leap(year);
+		 boolean actual = LeapYear.leap(year);
 		 assertTrue(actual);
 	}
-
+	
+	@Test
+	public void YearIsNotLeaptest() {
+				
+		 int year=2019;
+		 boolean actual = LeapYear.leap(year);
+		 assertFalse(actual);
+	}
 }
